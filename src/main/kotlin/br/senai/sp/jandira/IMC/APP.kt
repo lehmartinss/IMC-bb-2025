@@ -1,8 +1,10 @@
 package br.senai.sp.jandira.IMC
 
+import br.senai.sp.jandira.IMC.model.Consulta
 import br.senai.sp.jandira.IMC.model.Medico
 import br.senai.sp.jandira.IMC.model.Paciente
 import java.time.LocalDate
+import java.time.LocalTime
 
 fun main() {
     //Criar o paciente Ana Maria
@@ -44,5 +46,21 @@ fun main() {
     medico1.exibirFichaMedico()
 
 
+
+    //Criar uma consulta
+
+    var consulta1 = Consulta()
+    consulta1.agendarConsulta(
+        paciente1,
+        medico1,
+        LocalDate.of(2025, 2, 21),
+        LocalTime.of(10, 30),
+        valor = 199.99
+    )
+    consulta1.mostrarDadosDaConsulta()
 }
+
+
+
+
 
